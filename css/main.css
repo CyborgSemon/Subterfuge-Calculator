@@ -2,12 +2,13 @@
 
 * {
 	box-sizing: border-box;
+	margin: 0;
 }
 
 .container {
 	font-family: 'Roboto', sans-serif;
-	width: 400px;
-	margin: 30px auto 0;
+	width: 752px;
+	margin: 70px auto 0;
 	display: block;
 	background: #FFF;
 	padding: 10px 50px 50px;
@@ -47,7 +48,7 @@ label {
 input:focus ~ label, input:valid ~ label {
 	top: -20px;
  	font-size: 14px;
-	color: #2E7D32;
+	color: #303F9F;
 }
 
 .bar {
@@ -61,7 +62,7 @@ input:focus ~ label, input:valid ~ label {
   	width: 0;
   	bottom: 1px;
   	position: absolute;
-  	background: #2E7D32;
+  	background: #303F9F;
   	transition: 0.2s ease all;
   	-moz-transition: 0.2s ease all;
   	-webkit-transition: 0.2s ease all;
@@ -91,4 +92,74 @@ input:focus ~ .highlight {
   	-webkit-animation: inputHighlighter 0.3s ease;
   	-moz-animation: inputHighlighter 0.3s ease;
   	animation: inputHighlighter 0.3s ease;
+}
+
+
+/* CSS for the radio buttons to determin what form the suer will be using */
+
+.battle_type {
+	font-family: 'Roboto', sans-serif;
+	width: 752px;
+	margin: 70px auto 0;
+	display: block;
+	background: #FFF;
+	padding: 10px 50px 50px;
+}
+
+#select-div form {
+    display: none;
+}
+
+#select-div.attack #attacking {
+    display: block;
+}
+
+#select-div.defend #defending {
+    display: block;
+}
+
+#select-div.sub #subToSub {
+	display: block;
+}
+
+
+
+/* CSS for the form layout */
+
+
+.navbar {
+  	overflow: hidden;
+  	background-color: white;
+  	position: fixed;
+  	top: 0;
+  	width: 100%;
+}
+
+.navbar a {
+  float: left;
+  display: block;
+  color: #303F9F;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  transition: 0.3s;
+}
+
+.navbar a:hover {
+	background-color: #303F9F;
+	color: white;
+}
+
+
+.player-1-form {
+	float: left;
+	padding-right: 25px;
+	border-right: 1px solid grey;
+}
+
+.player-2-form {
+	float: right;
+	padding-left: 25px;
+	border-left: 1px solid grey;
 }
