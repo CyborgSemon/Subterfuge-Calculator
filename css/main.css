@@ -5,7 +5,9 @@
 	margin: 0;
 }
 
-.container {
+
+/* No need to assign the same code to all container classes when we can just put it on #select-div instead. */
+#select-div {
 	font-family: 'Roboto', sans-serif;
 	width: 752px;
 	margin: 70px auto 0;
@@ -13,6 +15,21 @@
 	background: #FFF;
 	padding: 10px 50px 50px;
 }
+
+/* When we put a container class on, we want to hide all of the forms except the one that the user expects to see - which is what the following code does */
+
+.container1 form:not(#attacking) {
+	display:none;
+}
+
+.container2 form:not(#attacking) {
+	display:none;
+}
+
+.container3 form:not(#attacking) {
+	display:none;
+}
+
 
 .group {
 	position: relative;
@@ -110,15 +127,15 @@ input:focus ~ .highlight {
     display: none;
 }
 
-#select-div.attack #attacking {
+#select-div.container1 #attacking {
     display: block;
 }
 
-#select-div.defend #defending {
+#select-div.container2 #defending {
     display: block;
 }
 
-#select-div.sub #subToSub {
+#select-div.container3 #subToSub {
 	display: block;
 }
 

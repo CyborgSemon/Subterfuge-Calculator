@@ -1,19 +1,30 @@
-// Definding the variavbils for the radio buttons to update the forms
+let attackingPost, defendingPost, subToSub; //Variables storing DOM nodes we want to use later. Undefined for now as document.getElementById does not work until the page has loaded
 
-var attackingPost = document.getElementById("radio-attack");
-var defendingPost = document.getElementById("radio-defend");
-var subToSub = document.getElementById("radio-sub");
+/**
+* NOTE: There are many other ways we could have solved this problem.
+*        + We could have simply moved the <script></script> tag in HTML from the top of the page to the last line inside <body></body>. This would mean that everything would have been put into the page before the script loaded. BUT this can cause other problems later on.
+*        + We could have used event handlers in the HTML instead (like <input type="radio" onclick="document.getElementById('select-div').className='container1'">). BUT this is bad practice.
+*/
 
-attackingPost.onclick = function () {
-    document.getElementById('select-div').className = 'attack';
-}
+window.onload = ()=>{ //When the window has finished loading
 
-defendingPost.onclick = function () {
-    document.getElementById('select-div').className = 'defend';
-}
+	//Assign values to the radio button variables (as the elements that we are referencing now exist)
+	attackingPost = document.getElementById("radio-attack");
+	defendingPost = document.getElementById("radio-defend");
+	subToSub = document.getElementById("radio-sub");
 
-subToSub.onclick = function () {
-    document.getElementById('select-div').className = 'sub';
+	//Assign the event handlers
+	attackingPost.onclick = ()=>{
+	    document.getElementById("select-div").className = "container1";
+	}
+
+	defendingPost.onclick = ()=>{
+	    document.getElementById("select-div").className = "container2";
+	}
+
+	subToSub.onclick = ()=>{
+	    document.getElementById("select-div").className = "container3";
+	}
 }
 
 
