@@ -180,3 +180,16 @@ input:focus ~ .highlight {
 	padding-left: 25px;
 	border-left: 1px solid grey;
 }
+
+input[type="submit"] {
+	width: 652px;
+	transition: 0.5s;
+}
+
+input[type="submit"]:hover {
+
+}
+
+form h1 {
+	margin-bottom: 30px;
+}
