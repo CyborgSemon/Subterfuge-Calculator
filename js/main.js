@@ -24,6 +24,7 @@ window.onload = ()=>{ //When the window has finished loading
 
 	subToSub.onclick = ()=>{
 	    document.getElementById("select-div").className = "container3";
+
 	}
 }
 

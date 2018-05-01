@@ -24,11 +24,19 @@
 			<form onsubmit="myScript()" id="attacking">
 				<h1>Attacking</h1>
 				<div class="player-1-form">
+					<div class="odd-one">
+						<div class="group">
+							<input type="text" required name="P1Drillers" id="P1Drillers">
+							<span class="highlight"></span>
+							<span class="bar"></span>
+							<label>Your Drillers</label>
+						</div>
+					</div>
 					<div class="group">
-						<input type="text" required name="P1Drillers" id="P1Drillers">
+						<input type="text" required name="P1Admrails" id="P1Admrails">
 						<span class="highlight"></span>
 						<span class="bar"></span>
-						<label>Your Drillers</label>
+						<label>Your Admrails</label>
 					</div>
 				</div>
 				<div class="player-2-form">
@@ -43,6 +51,12 @@
 						<span class="highlight"></span>
 						<span class="bar"></span>
 						<label>Their Shields</label>
+					</div>
+					<div class="group">
+						<input type="text" required name="P2Admrails" id="P2Admrails">
+						<span class="highlight"></span>
+						<span class="bar"></span>
+						<label>Their Admrails</label>
 					</div>
 				</div>
 				<div class="submitGroup">
@@ -67,11 +81,13 @@
 					</div>
 				</div>
 				<div class="player-2-form">
-					<div class="group">
-						<input type="text" required name="P2Drillers" id="P2Drillers">
-						<span class="highlight"></span>
-						<span class="bar"></span>
-						<label>Their Drillers</label>
+					<div class="odd-one">
+						<div class="group">
+							<input type="text" required name="P2Drillers" id="P2Drillers">
+							<span class="highlight"></span>
+							<span class="bar"></span>
+							<label>Their Drillers</label>
+						</div>
 					</div>
 				</div>
 				<input type="submit" value="Submit">
