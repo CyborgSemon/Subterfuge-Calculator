@@ -1,10 +1,50 @@
-/*Contact form*/
-
 * {
 	box-sizing: border-box;
 	margin: 0;
 }
 
+body {
+	background-color: #F5F5F5;
+}
+
+main {
+	border-radius: 2px;
+	width: 60%;
+	margin: 0 auto;
+	background-color: white;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+/* CSS for the nav bar */
+
+.navbar {
+	z-index: 10;
+  	overflow: hidden;
+  	background-color: #303F9F;
+  	position: fixed;
+  	top: 0;
+  	width: 100%;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.navbar a {
+  float: left;
+  display: block;
+  color: #999;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  transition: 0.3s;
+}
+
+.navbar a:hover {
+	/* background-color: white; */
+	color: white;
+}
+
+
+/*Contact form*/
 
 /* No need to assign the same code to all container classes when we can just put it on #select-div instead. */
 #select-div {
@@ -32,6 +72,7 @@
 
 
 .group {
+	z-index: 9;
 	position: relative;
 	margin-bottom: 45px;
 }
@@ -49,7 +90,7 @@ input:focus {
 	outline: none;
 }
 
-label {
+label:not(.submitButton) {
 	color: #999;
 	font-size: 18px;
 	font-weight: normal;
@@ -143,32 +184,6 @@ input:focus ~ .highlight {
 
 /* CSS for the form layout */
 
-
-.navbar {
-  	overflow: hidden;
-  	background-color: white;
-  	position: fixed;
-  	top: 0;
-  	width: 100%;
-}
-
-.navbar a {
-  float: left;
-  display: block;
-  color: #303F9F;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
-  transition: 0.3s;
-}
-
-.navbar a:hover {
-	background-color: #303F9F;
-	color: white;
-}
-
-
 .player-1-form {
 	float: left;
 	padding-right: 25px;
@@ -182,7 +197,14 @@ input:focus ~ .highlight {
 }
 
 input[type="submit"] {
+	margin-top: 310px;
 	width: 652px;
+	transition: 0.3s;
+}
+
+input[type="submit"]:hover {
+	background-color: #303F9F;
+	color: white;
 }
 
 form h1 {
