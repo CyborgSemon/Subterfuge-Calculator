@@ -22,12 +22,12 @@ body {
 }
 
 .extraPadding {
-	padding-bottom: 20px;
+	padding-bottom: 16px;
 	text-align: center;
 }
 
 .buttonFix {
-	margin: 0 auto 20px auto;
+	margin: 0 auto 16px auto;
 	width: 160px;
 }
 
@@ -39,14 +39,24 @@ body {
 	margin-top: 40px;
 }
 
+.specialists {
+	margin-top: 16px;
+}
+
 .spec-icon {
-	background-size: 48px;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 36px;
 }
 
 .spec-icon__foreman {
 	background-image: url("../icons/foreman.png");
 }
 
+
+.mdc-text-field--focused:not(.mdc-text-field--disabled) .mdc-floating-label {
+	color: var(--mdc-theme-primary);
+}
 
 /*
 
