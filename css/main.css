@@ -43,6 +43,12 @@ body {
 	margin-top: 16px;
 }
 
+/*
+
+CSS for the custom specialist icons
+
+*/
+
 .spec-icon {
 	width: 24px;
 	height: 24px;
@@ -52,8 +58,120 @@ body {
 	background-size: 42px;
 }
 
+.spec-icon__admiral {
+	background-image: url("../icons/admiral.png");
+}
+
+.spec-icon__assassin {
+	background-image: url("../icons/assassin.png");
+}
+
+.spec-icon__diplomat {
+	background-image: url("../icons/diplomat.png");
+}
+
+.spec-icon__double-agent {
+	background-image: url("../icons/double-agent.png");
+}
+
+.spec-icon__engineer {
+	background-image: url("../icons/engineer.png");
+}
+
 .spec-icon__foreman {
 	background-image: url("../icons/foreman.png");
+}
+
+.spec-icon__general {
+	background-image: url("../icons/general.png");
+}
+
+.spec-icon__helmsman {
+	background-image: url("../icons/helmsman.png");
+}
+
+.spec-icon__hypnotist {
+	background-image: url("../icons/hypnotist.png");
+}
+
+.spec-icon__infiltrator {
+	background-image: url("../icons/infiltrator.png");
+}
+
+.spec-icon__inspector {
+	background-image: url("../icons/inspector.png");
+}
+
+.spec-icon__intelligence-officer {
+	background-image: url("../icons/intelligence-officer.png");
+}
+
+.spec-icon__king {
+	background-image: url("../icons/king.png");
+}
+
+.spec-icon__lieutenant {
+	background-image: url("../icons/lieutenant.png");
+}
+
+.spec-icon__martyr {
+	background-image: url("../icons/martyr.png");
+}
+
+.spec-icon__minister-of-energy {
+	background-image: url("../icons/minister-of-energy.png");
+}
+
+.spec-icon__navigator {
+	background-image: url("../icons/navigator.png");
+}
+
+.spec-icon__pirate {
+	background-image: url("../icons/pirate.png");
+}
+
+.spec-icon__princess {
+	background-image: url("../icons/princess.png");
+}
+
+.spec-icon__queen {
+	background-image: url("../icons/queen.png");
+}
+
+.spec-icon__revered-elder {
+	background-image: url("../icons/revered-elder.png");
+}
+
+.spec-icon__saboteur {
+	background-image: url("../icons/saboteur.png");
+}
+
+.spec-icon__security-chief {
+	background-image: url("../icons/security-chief.png");
+}
+
+.spec-icon__sentry {
+	background-image: url("../icons/sentry.png");
+}
+
+.spec-icon__smuggler {
+	background-image: url("../icons/smuggler.png");
+}
+
+.spec-icon__thief {
+	background-image: url("../icons/thief.png");
+}
+
+.spec-icon__tinkerer {
+	background-image: url("../icons/tinkerer.png");
+}
+
+.spec-icon__tycoon {
+	background-image: url("../icons/tycoon.png");
+}
+
+.spec-icon__war-hero {
+	background-image: url("../icons/war-hero.png");
 }
 
 .mdc-text-field--focused:not(.mdc-text-field--disabled) .mdc-floating-label {
@@ -116,7 +234,6 @@ CSS for the FAB
 	position: absolute;
 	top: -11px;
 	right: -24px;
-	font-family: "Roboto","Helvetica","Arial",sans-serif;
 	font-weight: 600;
 	font-size: 12px;
 	width: 22px;
