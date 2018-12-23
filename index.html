@@ -3,136 +3,48 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+		<link rel="stylesheet" href="css/material.css">
 		<link rel="stylesheet" href="css/main.css">
-		<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-		<script type="text/javascript" src="js/main.js"></script>
-		<title>Subterfuge calculator</title>
+		<title>Subterfuge Calculator</title>
 	</head>
-	<body>
-		<div class="navbar">
-			<a href="index.html">❮ Back</a>
-		</div>
-		<main>
-			<div class="battle_type">
-				<form>
-					<input id="radio-attack" type="radio" name="start" value="1" checked="yes">Attacking
-					<input id="radio-defend" type="radio" name="start" value="2">Defending
-					<input id="radio-sub" type="radio" name="start" value="3">Sub to Sub
-				</form>
+	<body class="mdc-typography">
+		<div class="mdc-layout-grid gridTest">
+			<div class="mdc-layout-grid__inner">
+				<div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-3-desktop mdc-layout-grid__cell--span-1-tablet mdc-layout-grid__cell--span-0-phone"></div>
+				<div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6">
+					<div class="mdc-card">
+						<h1 class="mdc-typography--headline5 topCard">Subterfuge Calculator</h1>
+						<div class="mdc-layout-grid__inner extraPadding">
+							<div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6-desktop mdc-layout-grid__cell--span-4-tablet">
+								<h3 class="mdc-typography--subtitle1">You</h3>
+								<div class="mdc-text-field formTextField" data-mdc-auto-init="MDCTextField">
+									<input type="number" id="friendly_drillers" class="mdc-text-field__input">
+									<label class="mdc-floating-label" for="my-text-field">Your Drillers</label>
+									<div class="mdc-line-ripple"></div>
+								</div>
+							</div>
+							<div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6-desktop mdc-layout-grid__cell--span-4-tablet">
+								<h3 class="mdc-typography--subtitle1">Enemy</h3>
+								<div class="mdc-text-field formTextField" data-mdc-auto-init="MDCTextField">
+									<input type="number" id="enemy_drillers" class="mdc-text-field__input">
+									<label class="mdc-floating-label" for="my-text-field">Their Drillers</label>
+									<div class="mdc-line-ripple"></div>
+								</div>
+							</div>
+						</div>
+						<button class="mdc-button mdc-button--raised buttonFix">Submit</button>
+					</div>
+				</div>
+				<div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-3-desktop mdc-layout-grid__cell--span-1-tablet mdc-layout-grid__cell--span-0-phone"></div>
 			</div>
+			<div class="mdc-layout-grid__inner resultsNudge">
 
-			<div class="container1" id="select-div">
-				<form onsubmit="myScript()" id="attacking">
-					<h1>Attacking</h1>
-					<div class="player-1-form">
-						<div class="odd-one">
-							<div class="group">
-								<input type="text" required name="P1Drillers" id="P1Drillers">
-								<span class="highlight"></span>
-								<span class="bar"></span>
-								<label>Your Drillers</label>
-							</div>
-						</div>
-						<div class="group">
-							<input type="text" required name="P1Lieutenant" id="P1Lieutenant">
-							<span class="highlight"></span>
-							<span class="bar"></span>
-							<label>Your Lieutenants</label>
-						</div>
-						<div class="group">
-							<input type="text" required name="P1General" id="P1General">
-							<span class="highlight"></span>
-							<span class="bar"></span>
-							<label>Your Generals</label>
-						</div>
-					</div>
-					<div class="player-2-form">
-						<div class="group">
-							<input type="text" required name="P2Drillers" id="P2Drillers">
-							<span class="highlight"></span>
-							<span class="bar"></span>
-							<label>Their Drillers</label>
-						</div>
-						<div class="group">
-							<input type="text" required name="P2Shields" id="P2Shields">
-							<span class="highlight"></span>
-							<span class="bar"></span>
-							<label>Their Shields</label>
-						</div>
-						<div class="group">
-							<input type="text" required name="P2Lieutenant" id="P2Lieutenant">
-							<span class="highlight"></span>
-							<span class="bar"></span>
-							<label>Their Lieutenants</label>
-						</div>
-						<div class="group">
-							<input type="text" required name="P2General" id="P2General">
-							<span class="highlight"></span>
-							<span class="bar"></span>
-							<label>Their Generals</label>
-						</div>
-					</div>
-					<input class="submitButton" type="submit" value="Submit">
-				</form>
-				<form onsubmit="myScript()" id="defending">
-					<h1>Defending</h1>
-					<div class="player-1-form">
-						<div class="group">
-							<input type="text" required name="P1Drillers" id="P1Drillers">
-							<span class="highlight"></span>
-							<span class="bar"></span>
-							<label>Your Drillers</label>
-						</div>
-						<div class="group">
-							<input type="text" required name="P1Shields" id="P1Shields">
-							<span class="highlight"></span>
-							<span class="bar"></span>
-							<label>Your Shields</label>
-						</div>
-					</div>
-					<div class="player-2-form">
-						<div class="odd-one">
-							<div class="group">
-								<input type="text" required name="P2Drillers" id="P2Drillers">
-								<span class="highlight"></span>
-								<span class="bar"></span>
-								<label>Their Drillers</label>
-							</div>
-						</div>
-					</div>
-					<input type="submit" value="Submit">
-				</form>
-				<form onsubmit="myScript()" id="subToSub">
-					<h1>Sub To Sub</h1>
-					<div class="player-1-form">
-						<div class="group">
-							<input type="text" required name="P1Drillers" id="P1Drillers">
-							<span class="highlight"></span>
-							<span class="bar"></span>
-							<label>Your Drillers</label>
-						</div>
-					</div>
-					<div class="player-2-form">
-						<div class="group">
-							<input type="text" required name="P2Drillers" id="P2Drillers">
-							<span class="highlight"></span>
-							<span class="bar"></span>
-							<label>Their Drillers</label>
-						</div>
-					</div>
-					<input type="submit" value="Submit">
-				</form>
 			</div>
-		</main>
-		<!-- <script>
-			function myScript() {
-				var P1Drillers = document.getElementById("P1Drillers").value;
-				alert(P1Drillers);
-			}
-		</script> -->
+		</div>
+		<script src="js/material.js"></script>
+		<script>
+			window.mdc.autoInit();
+		</script>
 	</body>
 </html>
-
-<!-- Hey Cay -->
-<!-- You like git? -->
-<!-- lmao -->

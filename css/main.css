@@ -1,220 +1,40 @@
-* {
-	box-sizing: border-box;
-	margin: 0;
-}
-
 body {
-	background-color: #F5F5F5;
+	margin: 0;
+	padding: 0;
+	background-color: rgb(245, 245, 245);
 }
 
-main {
-	border-radius: 2px;
-	width: 60%;
-	margin: 0 auto;
-	background-color: white;
-	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-
-/* CSS for the nav bar */
-
-.navbar {
-	z-index: 10;
-  	overflow: hidden;
-  	background-color: #303F9F;
-  	position: fixed;
-  	top: 0;
-  	width: 100%;
-	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-
-.navbar a {
-  float: left;
-  display: block;
-  color: lightgrey;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
-  transition: 0.3s;
-}
-
-.navbar a:hover {
-	color: white;
-}
-
-
-/*Contact form*/
-
-/* No need to assign the same code to all container classes when we can just put it on #select-div instead. */
-#select-div {
-	font-family: 'Roboto', sans-serif;
-	width: 752px;
-	margin: 70px auto 0;
-	display: block;
-	background: #FFF;
-	padding: 10px 50px 50px;
-}
-
-/* When we put a container class on, we want to hide all of the forms except the one that the user expects to see - which is what the following code does */
-
-.container1 form:not(#attacking) {
-	display:none;
-}
-
-.container2 form:not(#attacking) {
-	display:none;
-}
-
-.container3 form:not(#attacking) {
-	display:none;
-}
-
-
-.group {
-	z-index: 9;
-	position: relative;
-	margin-bottom: 45px;
-}
-
-.group input {
-	font-size: 18px;
-	padding: 10px 10px 10px 5px;
-	display: block;
-	width: 300px;
-	border: none;
-	border-bottom: 1px solid #757575;
-}
-
-.group input:focus {
-	outline: none;
-}
-
-label {
-	color: #999;
-	font-size: 18px;
-	font-weight: normal;
+.gridTest {
+	width: 100%;
 	position: absolute;
-	pointer-events: none;
-	left: 5px;
-	top: 10px;
-	transition: 0.2s ease all;
-	-moz-transition: 0.2s ease all;
-	-webkit-transition: 0.2s ease all;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
 }
 
-.group input:focus ~ label, .group input:valid ~ label {
-	top: -20px;
- 	font-size: 14px;
-	color: #303F9F;
-}
-
-.bar {
-  	position: relative;
-  	display: block;
-  	width: 300px;
-}
-.bar:before, .bar:after {
-  	content: '';
-  	height: 2px;
-  	width: 0;
-  	bottom: 1px;
-  	position: absolute;
-  	background: #303F9F;
-  	transition: 0.2s ease all;
-  	-moz-transition: 0.2s ease all;
-  	-webkit-transition: 0.2s ease all;
-}
-.bar:before {
-  	left: 50%;
-}
-.bar:after {
-  	right: 50%;
-}
-
-.group input:focus ~ .bar:before, .group input:focus ~ .bar:after {
-  	width: 50%;
-}
-
-.highlight {
-  	position: absolute;
-  	height: 60%;
-  	width: 100px;
-  	top: 25%;
-  	left: 0;
-  	pointer-events: none;
-  	opacity: 0.5;
-}
-
-.group input:focus ~ .highlight {
-  	-webkit-animation: inputHighlighter 0.3s ease;
-  	-moz-animation: inputHighlighter 0.3s ease;
-  	animation: inputHighlighter 0.3s ease;
-}
-
-
-/* CSS for the radio buttons to determin what form the suer will be using */
-
-.battle_type {
-	font-family: 'Roboto', sans-serif;
-	width: 752px;
-	margin: 70px auto 0;
-	display: block;
-	background: #FFF;
-	padding: 10px 50px 50px;
-}
-
-#select-div form {
-    display: none;
-}
-
-#select-div.container1 #attacking {
-    display: block;
-}
-
-#select-div.container2 #defending {
-    display: block;
-}
-
-#select-div.container3 #subToSub {
-	display: block;
-}
-
-
-
-/* CSS for the form layout */
-
-.player-1-form {
-	float: left;
-	padding-right: 25px;
-	border-right: 1px solid grey;
-}
-
-.player-2-form {
-	float: right;
-	padding-left: 25px;
-	border-left: 1px solid grey;
-}
-
-input[type="submit"] {
-	font-size: 18px;
-	padding: 10px 10px 10px 5px;
-	border: none;
-	border-bottom: 1px solid #757575;
-	width: 652px;
-	margin-top: 30px;
-	transition: 0.3s;
-}
-
-input[type="submit"]:hover {
-	background-color: #303F9F;
+.topCard {
+	margin: 0;
+	padding: 22px 10px;
+	background-color: var(--mdc-theme-primary);
 	color: white;
+	border-top-left-radius: 4px;
+	border-top-right-radius: 4px;
 }
 
-form h1 {
-	margin-bottom: 30px;
+.extraPadding {
+	padding-bottom: 20px;
+	text-align: center;
 }
 
-.odd-one {
-	height: 131px;
-	margin-top: 43px;
+.buttonFix {
+	margin: 0 auto 20px auto;
+	width: 160px;
+}
+
+.formTextField {
+	width: 80%;
+}
+
+.resultsNudge {
+	margin-top: 40px;
 }

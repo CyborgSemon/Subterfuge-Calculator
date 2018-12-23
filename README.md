@@ -1,3 +1,3 @@
 # Subterfuge
 
-This is a helpful subterfuge calculator to help assist you in make future decisions in your subterfuge game. This calculator currently accounts for most knowen bugs and current mechanics.
+This ~~is~~ will be a helpful subterfuge calculator to help assist you in make future decisions in your subterfuge game. This calculator will account for most known bugs and current mechanics.
