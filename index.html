@@ -46,9 +46,28 @@
 		<button class="mdc-fab app-fab--absolute" aria-label="Favorite">
 			<span class="mdc-fab__icon material-icons">add</span>
 		</button>
+
+
+		<div class="mdc-dialog assessmentDialog" role="alertdialog" aria-modal="true" aria-labelledby="my-dialog-title" aria-describedby="my-dialog-content">
+			<div class="mdc-dialog__container">
+				<div class="mdc-dialog__surface">
+					<h2 class="mdc-dialog__title" id="my-dialog-title">Add new assessment</h2>
+					<form class="" action="index.php" method="post">
+						<div class="mdc-dialog__content" id="my-dialog-content">
+							yeet
+						</div>
+						<footer class="mdc-dialog__actions">
+							<button type="button" class="mdc-button mdc-dialog__button" data-mdc-dialog-action="cancel" data-mdc-auto-init="MDCRipple">Cancel</button>
+							<button type="button" class="mdc-button mdc-dialog__button mdc-dialog__button--default" data-mdc-dialog-action="submit" data-mdc-auto-init="MDCRipple">Submit</button>
+						</footer>
+					</form>
+				</div>
+			</div>
+			<div class="mdc-dialog__scrim"></div>
+		</div>
+
+
 		<script src="js/material.js"></script>
-		<script>
-			window.mdc.autoInit();
-		</script>
+		<script src="js/main.js"></script>
 	</body>
 </html>
