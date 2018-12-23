@@ -39,6 +39,15 @@ body {
 	margin-top: 40px;
 }
 
+.spec-icon {
+	background-size: 48px;
+}
+
+.spec-icon__foreman {
+	background-image: url("../icons/foreman.png");
+}
+
+
 /*
 
 CSS for the FAB
