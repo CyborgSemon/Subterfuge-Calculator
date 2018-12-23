@@ -10,7 +10,7 @@
 		<title>Subterfuge Calculator</title>
 	</head>
 	<body class="mdc-typography">
-		<div class="mdc-layout-grid gridTest">
+		<div class="mdc-layout-grid gridFix">
 			<div class="mdc-layout-grid__inner">
 				<div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-3-desktop mdc-layout-grid__cell--span-1-tablet mdc-layout-grid__cell--span-0-phone"></div>
 				<div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6">
@@ -25,14 +25,19 @@
 									<div class="mdc-line-ripple"></div>
 								</div>
 								<br>
-								<div class="specialists">
-									<button class="mdc-icon-button" data-mdc-auto-init="MDCRipple" data-mdc-ripple-is-unbounded>
-										<span class="spec-icon spec-icon__foreman mdl-badge mdl-badge--overlap" data-badge="3"></span>
-									</button>
-									<button class="mdc-icon-button material-icons">add</button>
+								<br>
+								<div class="mdc-text-field formTextField" data-mdc-auto-init="MDCTextField">
+									<input type="number" id="friendly_shields" class="mdc-text-field__input">
+									<label class="mdc-floating-label" for="my-text-field">Your Shields</label>
+									<div class="mdc-line-ripple"></div>
 								</div>
 								<br>
-
+								<div class="specialists">
+									<button class="mdc-icon-button button-spacing-fix" data-mdc-auto-init="MDCRipple" data-mdc-ripple-is-unbounded>
+										<span class="spec-icon spec-icon__foreman mdl-badge mdl-badge--overlap" data-badge="3"></span>
+									</button>
+									<button class="mdc-icon-button button-spacing-fix material-icons your-specialists-add">add</button>
+								</div>
 							</div>
 							<div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6-desktop mdc-layout-grid__cell--span-4-tablet">
 								<h3 class="mdc-typography--subtitle1">Enemy</h3>
@@ -40,6 +45,23 @@
 									<input type="number" id="enemy_drillers" class="mdc-text-field__input">
 									<label class="mdc-floating-label" for="my-text-field">Their Drillers</label>
 									<div class="mdc-line-ripple"></div>
+								</div>
+								<br>
+								<br>
+								<div class="mdc-text-field formTextField" data-mdc-auto-init="MDCTextField">
+									<input type="number" id="friendly_shields" class="mdc-text-field__input">
+									<label class="mdc-floating-label" for="my-text-field">Their Shields</label>
+									<div class="mdc-line-ripple"></div>
+								</div>
+								<br>
+								<div class="specialists">
+									<button class="mdc-icon-button button-spacing-fix" data-mdc-auto-init="MDCRipple" data-mdc-ripple-is-unbounded>
+										<span class="spec-icon spec-icon__engineer mdl-badge mdl-badge--overlap" data-badge="2"></span>
+									</button>
+									<button class="mdc-icon-button button-spacing-fix" data-mdc-auto-init="MDCRipple" data-mdc-ripple-is-unbounded>
+										<span class="spec-icon spec-icon__infiltrator mdl-badge mdl-badge--overlap" data-badge="1"></span>
+									</button>
+									<button class="mdc-icon-button button-spacing-fix material-icons their-specialists-add">add</button>
 								</div>
 							</div>
 						</div>
@@ -52,15 +74,29 @@
 
 			</div>
 		</div>
-		<button class="mdc-fab app-fab--absolute" aria-label="Favorite">
-			<span class="mdc-fab__icon material-icons">add</span>
-		</button>
 
-
-		<div class="mdc-dialog assessmentDialog" role="alertdialog" aria-modal="true" aria-labelledby="my-dialog-title" aria-describedby="my-dialog-content">
+		<div class="mdc-dialog your-specialists" role="alertdialog" aria-modal="true" aria-labelledby="my-dialog-title" aria-describedby="my-dialog-content">
 			<div class="mdc-dialog__container">
 				<div class="mdc-dialog__surface">
-					<h2 class="mdc-dialog__title" id="my-dialog-title">Add Specialists</h2>
+					<h2 class="mdc-dialog__title" id="my-dialog-title">Add Your Specialists</h2>
+					<form class="" action="index.php" method="post">
+						<div class="mdc-dialog__content" id="my-dialog-content">
+							yeet
+						</div>
+						<footer class="mdc-dialog__actions">
+							<button type="button" class="mdc-button mdc-dialog__button" data-mdc-dialog-action="cancel" data-mdc-auto-init="MDCRipple">Cancel</button>
+							<button type="button" class="mdc-button mdc-dialog__button mdc-dialog__button--default" data-mdc-dialog-action="submit" data-mdc-auto-init="MDCRipple">Submit</button>
+						</footer>
+					</form>
+				</div>
+			</div>
+			<div class="mdc-dialog__scrim"></div>
+		</div>
+
+		<div class="mdc-dialog their-specialists" role="alertdialog" aria-modal="true" aria-labelledby="my-dialog-title" aria-describedby="my-dialog-content">
+			<div class="mdc-dialog__container">
+				<div class="mdc-dialog__surface">
+					<h2 class="mdc-dialog__title" id="my-dialog-title">Add Their Specialists</h2>
 					<form class="" action="index.php" method="post">
 						<div class="mdc-dialog__content" id="my-dialog-content">
 							yeet
